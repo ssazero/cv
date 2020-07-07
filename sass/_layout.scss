@@ -1,0 +1,37 @@
+.cv {
+    width: 21cm;
+    margin: 0 auto;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.page {
+    height: 29.7cm;
+    width: 21cm;
+
+    display: flex;
+
+    &__left {
+        z-index: 2;
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--color-secondary);
+
+        &-top,
+        &-bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
