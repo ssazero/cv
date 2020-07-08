@@ -18,6 +18,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 :root {
   --color-primary: #d81e47;
   --color-secondary: #313449;
+  --color-grey: rgb(107, 107, 107);
   --color-font: rgb(19, 19, 19); }
 
 * {
@@ -34,7 +35,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: black;
@@ -43,6 +44,24 @@ body {
 
 @page {
   size: 7in 9.25in; }
+
+.color-1 {
+  color: var(--color-primary); }
+
+.color-2 {
+  color: var(--color-secondary); }
+
+.bold {
+  font-weight: 500; }
+
+.margin-left {
+  display: inline-block;
+  margin-left: 2rem; }
+
+.link {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--color-primary); }
 
 .cv {
   width: 21cm;
@@ -55,31 +74,51 @@ body {
   width: 21cm;
   display: flex; }
   .page__left {
+    position: relative;
     z-index: 2;
     flex-basis: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-secondary); }
+    .page__left::before {
+      content: "";
+      position: absolute;
+      top: 10.25rem;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+      height: 4px;
+      background-color: white; }
     .page__left-top, .page__left-bottom {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center; }
+    .page__left-middle {
+      width: 100%;
+      height: 36rem;
+      background-image: url("/img/tech.png");
+      background-position: right;
+      background-position-x: -34rem;
+      background-size: cover;
+      background-repeat: no-repeat; }
   .page__right {
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center; }
 
 .avatar {
+  position: relative;
   margin: 2rem 0;
   width: 17rem;
   height: 17rem;
   border-radius: 50%;
-  background-color: white;
-  overflow: hidden; }
+  background-color: white; }
   .avatar__image {
+    overflow: hidden;
     position: relative;
     top: 50%;
     left: 50%;
@@ -91,7 +130,9 @@ body {
     .avatar__image > img {
       width: 100%;
       height: 100%;
-      border-radius: 50%; }
+      border-radius: 50%;
+      -moz-user-select: none;
+      user-select: none; }
 
 .media {
   width: 75%;
@@ -127,15 +168,20 @@ body {
 .header {
   width: 100%; }
   .header__name {
+    font-family: 'Chakra Petch', sans-serif;
     width: 70%;
     margin: 2rem auto 0;
     font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
     color: var(--color-primary);
     border-bottom: 1px solid var(--color-secondary); }
   .header__profession {
     width: 70%;
     margin: 1rem auto;
     font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
     color: var(--color-font);
     word-spacing: 2px; }
 
@@ -145,18 +191,70 @@ body {
   text-align: justify; }
 
 .education {
-  margin-top: 2rem;
   width: 100%; }
+  .education__item {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem; }
+    .education__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .education__school {
+    color: var(--color-primary);
+    font-weight: 700; }
+  .education__degree {
+    color: var(--color-secondary); }
+  .education__year {
+    display: inline-block;
+    margin-left: 2rem;
+    color: var(--color-grey);
+    font-weight: 500; }
+
+.awards {
+  width: 100%; }
+  .awards__content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify; }
+
+.experience {
+  width: 100%; }
+  .experience__content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify; }
+
+.skills {
+  width: 100%; }
+  .skills__row {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem; }
+  .skills__column-title {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: .5rem; }
+  .skills__column-content {
+    font-weight: 500;
+    font-size: 1.3rem;
+    list-style-type: disc;
+    list-style-position: inside; }
 
 .section-header {
-  display: block;
   position: relative;
+  display: block;
   width: 70%;
-  margin: 0 auto;
+  margin: 1.5rem auto .5rem;
   text-align: left; }
   .section-header > h1 {
+    color: var(--color-secondary);
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 2.1rem; }
+    font-size: 2rem; }
   .section-header::before {
     content: "";
     position: absolute;
@@ -178,3 +276,13 @@ body {
     height: 1rem;
     border-radius: 50%;
     background-color: var(--color-primary); }
+
+.clause {
+  width: 96%;
+  margin: 0 auto 1rem;
+  position: absolute;
+  bottom: 0;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--color-font); }
