@@ -15,6 +15,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@page {
+  size: A4; }
+
 :root {
   --color-primary: #d81e47;
   --color-secondary: #313449;
@@ -70,8 +73,9 @@ body {
   font-size: 1.2rem; }
 
 .page {
-  height: 29.7cm;
+  height: 27.75cm;
   width: 21cm;
+  line-height: 1.45;
   display: flex; }
   .page__left {
     position: relative;
@@ -108,7 +112,8 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    margin-top: 2rem; }
 
 .avatar {
   position: relative;
@@ -131,6 +136,7 @@ body {
       width: 100%;
       height: 100%;
       border-radius: 50%;
+      transform: scale(1.15);
       -moz-user-select: none;
       user-select: none; }
 
@@ -170,7 +176,7 @@ body {
   .header__name {
     font-family: 'Chakra Petch', sans-serif;
     width: 70%;
-    margin: 2rem auto 0;
+    margin: 0 auto;
     font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 3px;
@@ -228,11 +234,11 @@ body {
 .skills {
   width: 100%; }
   .skills__row {
-    width: 65%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1rem; }
   .skills__column-title {
     color: var(--color-primary);
     font-weight: 700;
@@ -243,6 +249,80 @@ body {
     font-size: 1.3rem;
     list-style-type: disc;
     list-style-position: inside; }
+
+.trainings {
+  width: 100%; }
+  .trainings__list {
+    width: 80%;
+    margin: 0 auto; }
+    .trainings__list-item {
+      font-size: 1.2rem; }
+      .trainings__list-item:not(:last-child) {
+        margin-bottom: .5rem; }
+  .trainings__name {
+    display: block;
+    color: var(--color-primary);
+    margin-left: .5rem;
+    font-weight: 700; }
+  .trainings__date {
+    display: inline-block;
+    margin-left: 1rem;
+    color: var(--color-grey);
+    font-weight: 500; }
+
+.projects {
+  text-align: justify;
+  width: 100%; }
+  .projects__list {
+    width: 80%;
+    margin: 0 auto; }
+    .projects__list-item {
+      font-size: 1.2rem; }
+      .projects__list-item:not(:last-child) {
+        margin-bottom: .5rem; }
+  .projects__link {
+    color: var(--color-primary);
+    margin-left: .5rem;
+    font-weight: 700;
+    text-decoration: none; }
+  .projects__description {
+    display: inline-block;
+    color: var(--color-grey);
+    font-weight: 500; }
+
+.abilities {
+  width: 100%; }
+  .abilities__row {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
+    .abilities__row:not(:last-child) {
+      margin-bottom: 1rem; }
+    .abilities__row-title {
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: .5rem; }
+    .abilities__row-content {
+      font-weight: 500;
+      font-size: 1.3rem;
+      list-style-type: disc;
+      list-style-position: inside; }
+
+.hobbies {
+  width: 100%; }
+  .hobbies__row {
+    width: 75%;
+    margin: 2rem auto 0;
+    display: flex;
+    margin-bottom: 1.5rem; }
+  .hobbies__item {
+    flex: 0 0 33.3333%;
+    text-align: center; }
+    .hobbies__item > img {
+      width: 60%;
+      height: auto; }
 
 .section-header {
   position: relative;
@@ -286,3 +366,11 @@ body {
   font-size: 1.1rem;
   line-height: 1;
   color: var(--color-font); }
+
+.page-number {
+  position: absolute;
+  bottom: .3rem;
+  right: .5rem;
+  color: var(--color-font);
+  font-size: 1.1rem;
+  font-weight: 500; }

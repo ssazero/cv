@@ -23,6 +23,7 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            transform: scale(1.15);
 
             -moz-user-select: none;
             user-select: none;
@@ -78,7 +79,7 @@
     &__name {
         font-family: 'Chakra Petch', sans-serif;
         width: 70%;
-        margin: 2rem auto 0;
+        margin: 0 auto;
         font-size: 3.5rem;
         font-weight: 600;
         letter-spacing: 3px;
@@ -163,13 +164,13 @@
     width: 100%;
 
     &__row {
-        width: 65%;
+        width: 75%;
         margin: 0 auto;
 
         display: flex;
         justify-content: space-between;
 
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     &__column {
@@ -185,6 +186,123 @@
             font-size: 1.3rem;
             list-style-type: disc;
             list-style-position: inside;
+        }
+    }
+}
+
+.trainings {
+    width: 100%;
+
+    &__list {
+        width: 80%;
+        margin: 0 auto;
+
+        &-item {
+            font-size: 1.2rem;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+
+        }
+    }
+
+    &__name {
+        display: block;
+        color: var(--color-primary);
+        margin-left: .5rem;
+        font-weight: 700;
+    }
+
+    &__date {
+        display: inline-block;
+        margin-left: 1rem;
+        color: var(--color-grey);
+        font-weight: 500;
+    }
+}
+
+.projects {
+    text-align: justify;
+    width: 100%;
+
+    &__list {
+        width: 80%;
+        margin: 0 auto;
+
+        &-item {
+            font-size: 1.2rem;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+
+        }
+    }
+
+    &__link {
+        color: var(--color-primary);
+        margin-left: .5rem;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &__description {
+        display: inline-block;
+        color: var(--color-grey);
+        font-weight: 500;
+    }
+}
+
+.abilities {
+    width: 100%;
+
+    &__row {
+        width: 75%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &-title {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: .5rem;
+        }
+
+        &-content {
+            font-weight: 500;
+            font-size: 1.3rem;
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+    }
+}
+
+.hobbies {
+    width: 100%;
+
+    &__row {
+        width: 75%;
+        margin: 2rem auto 0;
+
+        display: flex;
+
+        margin-bottom: 1.5rem;
+    }
+
+    &__item {
+        flex: 0 0 33.3333%;
+        text-align: center;
+
+        &>img {
+            width: 60%;
+            height: auto;
         }
     }
 }
@@ -238,4 +356,13 @@
     font-size: 1.1rem;
     line-height: 1;
     color: var(--color-font);
+}
+
+.page-number {
+    position: absolute;
+    bottom: .3rem;
+    right: .5rem;
+    color: var(--color-font);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
