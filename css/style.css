@@ -136,7 +136,7 @@ body {
       width: 100%;
       height: auto;
       border-radius: 50%;
-      transform: scale(1.15);
+      transform: scale(1.31);
       object-fit: contain;
       -moz-user-select: none;
       user-select: none; }
@@ -207,14 +207,15 @@ body {
     font-size: 1.3rem; }
     .education__item:not(:last-child) {
       margin-bottom: .5rem; }
-  .education__school {
+  .education__title {
     color: var(--color-primary);
-    font-weight: 700; }
+    font-weight: 700;
+    margin-left: .5rem; }
   .education__degree {
     color: var(--color-secondary); }
   .education__year {
     display: inline-block;
-    margin-left: 2rem;
+    margin-left: 2.1rem;
     color: var(--color-grey);
     font-weight: 500; }
 
@@ -227,10 +228,28 @@ body {
 
 .experience {
   width: 100%; }
-  .experience__content {
+  .experience__item {
     width: 80%;
     margin: 0 auto;
-    text-align: justify; }
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem; }
+    .experience__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .experience__header {
+    text-align: left; }
+  .experience__title {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-left: .5rem; }
+  .experience__description {
+    margin-left: 2.1rem;
+    text-align: justify;
+    color: var(--color-secondary); }
+  .experience__year {
+    display: inline-block;
+    color: var(--color-grey);
+    font-weight: 500; }
 
 .skills {
   width: 100%; }
@@ -267,7 +286,7 @@ body {
     font-weight: 700; }
   .trainings__date {
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: .5rem;
     color: var(--color-grey);
     font-weight: 500; }
 
