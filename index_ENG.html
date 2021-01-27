@@ -93,9 +93,7 @@
                         >
                      </span>
                   </div>
-                  <span class="copyright"
-                     >The theme of&nbsp;this CV was created by Samuel Kędziora © 2020
-                  </span>
+                  <span class="copyright">:)</span>
                </div>
             </div>
             <!-- RIGHT SIDE -->
@@ -311,9 +309,7 @@
                         >
                      </span>
                   </div>
-                  <span class="copyright"
-                     >The theme of&nbsp;this CV was created by Samuel Kędziora © 2020
-                  </span>
+                  <span class="copyright">:)</span>
                </div>
             </div>
             <!-- RIGHT SIDE -->
@@ -667,9 +663,7 @@
                         >
                      </span>
                   </div>
-                  <span class="copyright"
-                     >The theme of&nbsp;this CV was created by Samuel Kędziora © 2020
-                  </span>
+                  <span class="copyright">:)</span>
                </div>
             </div>
             <!-- RIGHT SIDE -->
@@ -758,5 +752,12 @@
             </div>
          </div>
       </div>
+      <script>
+         const currentYear = new Date().getFullYear();
+         const elements = document.querySelectorAll('.copyright');
+         elements.forEach((element) => {
+            element.textContent = `The theme of\u00A0this CV was created by Samuel Kędziora © ${currentYear}`;
+         });
+      </script>
    </body>
 </html>
